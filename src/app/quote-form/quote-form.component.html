@@ -1,0 +1,28 @@
+<form action="">
+    <div class="form-group w-50">
+        <label for="firstName">First Name:</label>
+        <input required minlength="3" maxlength="12" ngModel name="firstName" #firstName="ngModel" id="firstName" type="text" class="form-control" />
+        <div class="alert alert-danger" *ngIf="firstName.touched && firstName.invalid">First name is required.</div>
+    </div>
+
+    <div class="form-group w-50">
+        <label for="message">Leave a message:</label
+    ><textarea
+     required
+      ngModel
+      name="message"
+      #message ="ngModel"
+      id="message"
+      cols="30"
+      rows="10"
+      class="form-control"
+    ></textarea>
+    <div class="alert aler-danger" *ngIf="message.touched && message.invalid ">
+      <div *ngIf="message.errors">Message is a required field.</div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+  <br />
+  <button   class="btn btn-primary">Submit</button>
+</form>
